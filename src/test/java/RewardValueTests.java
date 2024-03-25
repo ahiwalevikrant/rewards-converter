@@ -15,7 +15,7 @@ public class RewardValueTests {
     void create_with_miles_value() {
         int milesValue = 1000;
         var rewardValue = new RewardValue(milesValue);
-
+        assertEquals(milesValue, rewardValue.getMilesValue());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class RewardValueTests {
         int milesValue = 1000;
         double expectedCashValue = milesValue * RewardValue.MILES_TO_CASH_CONVERSION_RATE;
         var rewardValue = new RewardValue(milesValue);
-
+        assertEquals(expectedCashValue, rewardValue.getCashValue());
     }
 
 }
